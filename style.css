@@ -18,6 +18,8 @@ p{
 }
 .advantages{
 	padding-top: 50px;
+	position: relative;
+	z-index: 2;
 }
 .img-wrapper{
 	position: relative;
@@ -222,6 +224,7 @@ p{
 	margin-left: 15px;
 }
 .contact{
+	overflow-x: unset!important;
 	background: url('assets/Podlozhka.jpg') no-repeat;
 	-webkit-background-size: cover;
 	     -o-background-size: cover;
@@ -551,6 +554,7 @@ footer hr{
 .Header{
 	position: relative;
 	margin-top: 35px;
+	opacity: 0;
 }
 .bgWrap{
 	position: absolute;
@@ -566,20 +570,29 @@ footer hr{
 	background: url("assets/bg.jpg") no-repeat;
 	background-size: cover;
 }
-.subLogo{
+.mask{
+	background: #FFFFFF;
 	position: absolute;
-	top: 120px;
-	left: 12%;
-	color: #ffffff;
-	font-size: 30px;
-	font-weight: 700;
-	line-height: 36px;
-	text-transform: uppercase;
-	z-index: 9;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+.rectangle-mask{
+	background: #FFFFFF;
+	position: absolute;
+	/*z-index: 3;*/
+	opacity: .6;
+	height: 150px;
+	top: -35px;
+	left: 10%;
+	width: 30%;
+	z-index: 1;
 }
 .rectangle{
 	position: absolute;
-	height: 250px;
+	height: 150px;
 	top: -35px;
 	left: 10%;
 	background-color: #e29451;
@@ -711,6 +724,13 @@ nav hr{
 	font-size: 15px;
 	font-weight: 400;
 	margin-top: 20px;
+}
+.suggestion-wrapper{
+	margin-top: 100px;
+}
+.activity{
+	position: relative;
+	z-index: 2;
 }
 @media(max-width: 992px){
 	.bgWrap{
